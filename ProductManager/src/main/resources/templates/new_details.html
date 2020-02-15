@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>CREATE NEW REQUEST</title>
+</head>
+<body>
+	<div align="center">
+		<h1>CREATE NEW DETAILS</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${details}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+			<body style="background-color:powderblue;">
+			
+
+			
+				<tr>
+					<td>CUSTOMER NAME:</td>
+					<td><input type="text" th:field="*{customername}" /></td>
+				</tr>
+				<tr>
+					<td>NUMBER OF INNOVA:</td>
+					<td><input type="text" th:field="*{numberofinnova}" /></td>
+				</tr>
+				<tr>
+					<td>NUMBER OF BOLERO:</td>
+					<td><input type="text" th:field="*{numberofbolero}" /></td>
+				</tr>
+				<tr>
+					<td>NUMBERS OF OTHERS CARS:</td>
+					<td><input type="text" th:field="*{numberofotherscars}" /></td>
+				</tr>								
+				<tr>
+				<tr>
+					<td>CONTACT PERSON NAME:</td>
+					<td><input type="text" th:field="*{contactpersonname}" /></td>
+				</tr>								
+				<tr>
+				<tr>
+					<td>OWNER NAME:</td>
+					<td><input type="text" th:field="*{ownername}" /></td>
+				</tr>	
+				<tr>
+					<td>BOOKED DATE:</td>
+					<td><input type="text" th:field="*{bookeddate}" /></td>
+				</tr>							
+				<tr>
+				<tr>
+					<td>TOTAL AMOUNT:</td>
+					<td><input type="text" th:field="*{totalammount}" /></td>
+				</tr>								
+				<tr>
+					<td colspan="2"><button type="submit">Save</button> </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

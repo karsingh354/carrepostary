@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Product Manager</title>
+</head>
+<body>
+<div align="center">
+    <h1>CAR BOOKING DETAILS</h1>
+    <a href="new">Create New Product</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+    <body style="background-color:powderblue;">
+        <thead>
+            <tr>
+                <th>CUSTOMER ID</th>
+                <th>CUSTOMER NAME</th>
+                <th>NUMBER OF INNOVA</th>
+                <th>NUMBER OF BOLERO</th>
+                <th>NUMBERS OF OTHERS CARS</th>
+                <th>CONTACT PERSON NAME</th>
+                <th>OWNER NAME</th>
+                <th>TOTAL AMMOUNT</th>
+                <th>BOOKED DATE</th>
+                <th>ACTIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="details : ${listdetails}">
+            	<td th:text="${details.customerid}">CUSROMER ID</td>
+                <td th:text="${details.customername}">CUSTOMER Name</td>
+                <td th:text="${details.numberofinnova}">NUMBER OF INNOVA</td>
+                <td th:text="${details.numberofbolero}">NUMBER OF BOLERO</td>
+                <td th:text="${details.numberofotherscars}">NUMBER OF OTHERS CARS</td>
+                <td th:text="${details.contactpersonname}">CONTACT PERSON NAME</td>
+                <td th:text="${details.ownername}">OWNER NAME</td>
+                <td th:text="${details.totalammount}">TOTAL AMMOUNT</td>
+                <td th:text="${details.bookeddate}">BOOKED DATE</td>
+                
+                <td>
+                	<a th:href="@{'/edit/' + ${details.customerid}}">Edit</a>
+                	&nbsp;&nbsp;&nbsp;
+                	<a th:href="@{'/delete/' + ${details.customerid}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
+</body>
+</html>
